@@ -82,3 +82,5 @@ Password for ‘https://github.com‘:
 之前时不需要输入的，现在需要输入了，原因是git更新了一个证书，我们本地需要再更新以下：
 https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0
 进去后点击下载安装 GCMW-1.14.0.exe即可：
+
+# next config 
