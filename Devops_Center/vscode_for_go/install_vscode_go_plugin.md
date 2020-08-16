@@ -62,3 +62,23 @@ Installing 1 tool at N:\GoSpace\bin in module mode.
 Installing github.com/stamblerre/gocode (N:\GoSpace\bin\gocode-gomod.exe) SUCCEEDED
 
 All tools successfully installed. You are ready to Go :).
+
+# git push github 免密码登录 
+git config --global credential.helper store
+
+打开~/.gitconfig文件，会发现多了一项:
+
+[credential]
+
+　　helper = store
+
+此时,再次push  输入用户名和密码,以后再次push即可免去输入用户名和密码
+
+
+在使用git push时报出如下的错误：
+Fatal: HttpRequestException encountered.
+Username for ‘https://github.com‘:
+Password for ‘https://github.com‘:
+之前时不需要输入的，现在需要输入了，原因是git更新了一个证书，我们本地需要再更新以下：
+https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0
+进去后点击下载安装 GCMW-1.14.0.exe即可：
